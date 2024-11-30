@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="~{ base :: layout(~{::title} , ~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang đăng ký</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<section class="registration-section">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg border-0 rounded">
+                    <div class="card-header text-center custom-blue text-white">
+                        <h3>Đăng Ký</h3>
+                        <th:block th:if="${session.msg}">
+                            <p class="fs-5 text-center text-success">[[${session.msg}]]</p>
+                            <th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>
+                        </th:block>
+                    </div>
+                    <div class="card-body">
+                        <form action="saveUser" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nhập họ và tên" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="qualification" class="form-label">Trình độ học vấn</label>
+                                <input type="text" name="qualification" id="qualification" class="form-control" placeholder="Nhập trình độ học vấn" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Địa chỉ</label>
+                                <input type="text" name="address" id="address" class="form-control" placeholder="Nhập địa chỉ" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                                    <label class="form-check-label" for="male">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                                    <label class="form-check-label" for="female">Nữ</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mật khẩu</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Nhập lại mật khẩu</label>
+                                <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+
+
+                            <button class="btn btn-custom-register col-12">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

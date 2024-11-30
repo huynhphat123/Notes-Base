@@ -1,0 +1,183 @@
+/* Đổi màu cho navbar */
+.navbar {
+    background-color: #1a73e8; /* Màu xanh dương tươi */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important; /* Màu vàng khi hover */
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* Thêm bóng mờ cho nút đăng nhập và đăng ký */
+.btn-primary {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Tối màu khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.container-fluid img {
+    width: 100%;
+    height: 100vh; /* Full màn hình */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+/* Cải thiện độ đọc cho các phần nội dung */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*-----------------------*/
+/*index*/
+/* Style cho phần container chính */
+.index-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.index-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;  /* Giảm độ sáng của hình ảnh để làm nổi bật chữ */
+}
+
+/* Phần overlay chứa chữ */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Tạo hiệu ứng bóng cho chữ */
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out 1s;  /* Tạo hiệu ứng cho phụ đề */
+}
+
+/* Thêm hiệu ứng cho chữ */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+ .custom-blue {
+     color: #095296;
+     background-color: #095296;
+ }
+/*đăng ký*/
+/* Màu custom */
+:root {
+    --custom-blue: #095296; /* Đặt màu blue của bạn tại đây */
+    --custom-black: #000000; /* Màu đen cho nút mặc định */
+    --custom-red: #4e2424; /* Màu đỏ cho nút khi hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.registration-section {
+    background-color: #f8f9fa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bg-custom-blue {
+    background-color: var(--custom-blue) !important;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body .form-control {
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card-body .form-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Nút Đăng Ký */
+button.btn-custom-register {
+    background-color: var(--custom-blue); /* Màu đen khi mặc định */
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
+}
+
+/* Tạo bóng đổ cho các phần tử */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Điều chỉnh chiều rộng của các cột */
+@media (max-width: 767px) {
+    .col-md-6 {
+        width: 100%;
+    }
+}
+
+/* Thêm một chút khoảng cách cho các phần tử */
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.fs-5 {
+    font-size: 1.25rem;
+}
+
+.text-success {
+    color: #28a745;
+}
+
