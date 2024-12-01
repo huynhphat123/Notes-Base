@@ -3,7 +3,7 @@
       th:fragment="layout(title,content)">
 <head>
     <meta charset="UTF-8">
-    <title th:replace="${title}"></title>
+    <title th:replace="${title}">Tập ghi chú</title>
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -13,6 +13,9 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Thêm favicon -->
+    <link rel="icon" href="/favicon_io/android-chrome-192x192.png" type="image/x-icon">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -52,7 +55,7 @@
 
 <div th:replace="${content}"></div>
 
-<footer class="custom-blue text-white text-center py-3 mt-4" style="margin-top: 250px">
+<footer class="custom-blue text-white text-center py-3 mt-4" style="margin-top:250px">
     <div class="container">
         <p class="mb-0">&copy; 2024 Ghi chú | Designed with <i class="fa-solid fa-heart text-danger "></i> by You</p>
         <a href="https://facebook.com" class="text-white mx-2"><i class="fa-brands fa-facebook"></i></a>
@@ -65,6 +68,7 @@
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
 </body>
 </html>
