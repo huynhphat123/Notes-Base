@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org"
-      th:replace="~{ base :: layout(~{::title} , ~{::section})}">
+      th:replace="~{ base :: layout(~{::title} , ~{::section} ) }">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <section>h11</section>
+<section>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="card">
+                    <div class="card-header text-center custom-blue">
+                        <h3 style=" color: white; ">Thêm ghi chú của bạn</h3>
+                        <th:block th:if="${session.msg}">
+                            <p class="fs-5 text-center text-success">[[${session.msg}]]</p>
+                            <th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>
+                        </th:block>
+                    </div>
+                    <div class="card-body">
+                        <form action="saveNotes" method="post">
+                            <div class="mb-3">
+                                <label>Nhập tiêu đề</label>
+                                <input type="text" name="title" class="form-control">
+                            </div>
 
+                            <div class="mb-3">
+                                <label>Nhập mô tả</label>
+                                <textarea rows="6" class="form-control" name="description"></textarea>
+                            </div>
 
-</script>
+                            <button class="btn btn-primary mt-4">Lưu</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
