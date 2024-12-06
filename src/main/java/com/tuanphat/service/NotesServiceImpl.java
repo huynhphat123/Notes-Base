@@ -4,6 +4,9 @@ import com.tuanphat.entity.Notes;
 import com.tuanphat.entity.User;
 import com.tuanphat.repository.NotesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,9 +28,9 @@ public class NotesServiceImpl implements NotesService{
     }
 
     @Override
-    public List<Notes> getNotesByUser(User user) {
-
-        return notesRepository.findByUser(user);
+    public Page<Notes> getNotesByUser(User user, int pageNum) {
+        Pageable pageable = PageRequest.of(pageNum,5);
+        return notesRepository.findByUser(user,pageable);
     }
 
     @Override
